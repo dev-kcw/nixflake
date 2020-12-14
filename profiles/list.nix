@@ -1,3 +1,11 @@
 [
   ./core
+  ./dev
+  ./laptop
+  ./network
+  ./network/comms
+  ./network/nm
+  ./network/web
+  ./visual
+  ./visual/sway
 ]
