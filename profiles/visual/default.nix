@@ -2,7 +2,7 @@
 let inherit (builtins) readFile;
 in
 {
-  imports = [ ./sway ../dev ../net ];
+  imports = [ ./sway ../dev ../network ];
 
   hardware.opengl.enable = true;
   hardware.opengl.driSupport = true;
@@ -44,7 +44,7 @@ in
           '';
         in
         [
-          ("${pkgs.writeText "iconrc" "${gtk}"}")
+         # ("${pkgs.writeText "iconrc" "${gtk}"}")
           "${pkgs.adapta-gtk-theme}/share/themes/Adapta/gtk-2.0/gtkrc"
           "${pkgs.gnome3.gnome-themes-extra}/share/themes/Adwaita/gtk-2.0/gtkrc"
         ];
@@ -66,7 +66,6 @@ in
       papirus-icon-theme
       pulsemixer
       qt5.qtgraphicaleffects
-      sddm-chili
       stdmanpages
       xsel
       zathura
@@ -84,7 +83,6 @@ in
 
     displayManager.sddm = {
       enable = true;
-      theme = "chili";
     };
   };
 }

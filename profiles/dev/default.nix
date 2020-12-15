@@ -18,7 +18,7 @@
   ];
 
   fonts = {
-    fonts = [ pkgs.dejavu_nerdfont ];
+    fonts = [ pkgs.dejavu_fonts pkgs.nerdfonts ];
     fontconfig.defaultFonts.monospace = [ "DejaVu Sans Mono Nerd Font Complete Mono" ];
   };
 
