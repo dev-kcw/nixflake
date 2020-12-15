@@ -1,6 +1,4 @@
 {
-  imports = [ ../../profiles/]
-
   users.users.nixos = {
     uid = 1000;
     password = "nixos";

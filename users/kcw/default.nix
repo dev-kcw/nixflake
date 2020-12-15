@@ -3,7 +3,7 @@
     ../../profiles/dev
     ../../profiles/laptop
     ../../profiles/network
-    ../../profiles/sec
+    # ../../profiles/sec
     ../../profiles/visual
   ];
 
@@ -14,7 +14,7 @@
       ../profiles/git
     ];
   };
-  
+
   users.users.kcw = {
     uid = 1001;
     password = "nixos";

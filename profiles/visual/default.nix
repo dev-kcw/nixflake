@@ -2,7 +2,7 @@
 let inherit (builtins) readFile;
 in
 {
-  imports = [ ./sway ];
+  imports = [ ./sway ../dev ../net ];
 
   hardware.opengl.enable = true;
   hardware.opengl.driSupport = true;
@@ -33,7 +33,7 @@ in
     };
 
     sessionVariables = {
-      # Theme Settings
+      # Theme settings
       QT_QPA_PLATFORMTHEME = "gtk2";
 
       GTK2_RC_FILES =
@@ -44,7 +44,7 @@ in
           '';
         in
         [
-          ("${pkgs.writeTest "iconrc" "${gtk}"}")
+          ("${pkgs.writeText "iconrc" "${gtk}"}")
           "${pkgs.adapta-gtk-theme}/share/themes/Adapta/gtk-2.0/gtkrc"
           "${pkgs.gnome3.gnome-themes-extra}/share/themes/Adwaita/gtk-2.0/gtkrc"
         ];
@@ -52,7 +52,6 @@ in
 
     systemPackages = with pkgs; [
       adapta-gtk-theme
-      cursor
       dzen2
       feh
       ffmpeg-full
