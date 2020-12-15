@@ -65,24 +65,24 @@
         in
         recursiveUpdate packages overlayPkgs;
 
-      nixosModules =
-        let
+      #nixosModules =
+       # let
           # binary cache
-          cachix = import ./cachix.nix;
-          cachixAttrs = { inherit cachix; };
+       #   cachix = import ./cachix.nix;
+       #   cachixAttrs = { inherit cachix; };
 
           # modules
-          moduleList = import ./modules/list.nix;
-          modulesAttrs = pathsToImportedAttrs moduleList;
+       #   moduleList = import ./modules/list.nix;
+       #   modulesAttrs = pathsToImportedAttrs moduleList;
 
           # profiles
-          profilesList = import ./profiles/list.nix;
-          profilesAttrs = { profiles = pathsToImportedAttrs profilesList; };
+       #   profilesList = import ./profiles/list.nix;
+       #   profilesAttrs = { profiles = pathsToImportedAttrs profilesList; };
 
-        in
-        recursiveUpdate
-          (recursiveUpdate cachixAttrs modulesAttrs)
-          profilesAttrs;
+       # in
+       # recursiveUpdate
+       #   (recursiveUpdate cachixAttrs modulesAttrs)
+       #   profilesAttrs;
 
       templates.flk.path = ./.;
       templates.flk.description = "flk template";
