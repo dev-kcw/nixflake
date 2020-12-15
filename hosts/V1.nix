@@ -2,7 +2,7 @@
 
 {
   ### root password is empty by default ###
-  imports = [ ../users/nixos ../users/root ../users/kcw ];
+  imports = [ ../users/root ../users/kcw ];
 
   # Use the GRUB 2 boot loader.
   boot = {

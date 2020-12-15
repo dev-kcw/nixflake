@@ -1,17 +1,17 @@
 {
   imports = [
-    ../../profiles/dev
-    ../../profiles/laptop
-    ../../profiles/network
+    #../../profiles/dev
+    #../../profiles/laptop
+    #../../profiles/network
     # ../../profiles/sec
     ../../profiles/visual
   ];
 
   home-manager.users.kcw = {
     imports = [
-      ../profiles/alacritty
-      ../profiles/direnv
-      ../profiles/git
+   #   ../profiles/alacritty
+   #   ../profiles/direnv
+   #   ../profiles/git
     ];
   };
 

@@ -1,3 +1,4 @@
 [
+  ./sec
   ./sec/mitigations.nix
 ]
