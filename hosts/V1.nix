@@ -19,7 +19,6 @@
       #  };
       };
     };
-    kernelPackages = pkgs.linuxPackages_latest;
   #  vesa = true;
   };
 
